@@ -1,7 +1,9 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 .brand{
     color: rgb(255, 255, 255);
@@ -25,10 +27,64 @@
     padding: 20px 16px;
     text-decoration: none;
 }
-.navbar ul li {
-    display: inline-block;
-
+.navbar ul {
+  display: flex;
+  list-style: none;
 }
 .navbar a:hover {
     background-color: #111;
+}
+
+/* 2. Hero Section */
+.hero-banner {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.hero-banner p {
+  font-size: 1.15rem;
+  color: #4b5563;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 3. Clients Section */
+.clients-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.clients-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e7eb;
+  height: 200px;
+  border-radius: 15px;
+  color: #6b7280;
+  font-weight: 600;
+  overflow: hidden;
+  
+}
+.image-container img {
+  width: 100%;            /* Forces image to span container width */
+  height: 100%;           /* Forces image to span container height */
+  object-fit: cover; 
 }
