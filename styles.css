@@ -96,7 +96,7 @@
 .image-container img {
   width: 100%;            /* Forces image to span container width */
   height: 100%;           /* Forces image to span container height */
-  object-fit: cover; 
+  object-fit: fill; 
 }
 
 .split-bg-wrapper {
