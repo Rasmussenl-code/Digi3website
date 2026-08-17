@@ -5,34 +5,38 @@
   margin: 0;
   padding: 0;
 }
-.brand{
-    color: rgb(255, 255, 255);
+
+.brand {
+  color: rgb(255, 255, 255);
 }
 
-.navbar{
-    display: flex;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #550c0c;
-    list-style-type: none;
-    justify-content: space-between;
-    align-items: center;
+.navbar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #550c0c;
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
 }
+
 .navbar a {
-    display: flex;
-    color: white;
-    text-align: center;
-    padding: 20px 16px;
-    text-decoration: none;
+  display: flex;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
 }
+
 .navbar ul {
   display: flex;
   list-style: none;
 }
+
 .navbar a:hover {
-    background-color: #111;
+  background-color: #111;
 }
 
 /* 2. Hero Section */
@@ -66,22 +70,22 @@
 .client-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 1.5rem;
   margin-bottom: auto;
   align-items: start;
   justify-content: start;
-  
 }
-
 
 .client-card p {
   align-items: start;
   text-align: start;
-
 }
+
 .client-card h2 {
   text-align: center;
 }
+
 .image-container {
   display: flex;
   align-items: start;
@@ -91,29 +95,31 @@
   color: #6b7280;
   font-weight: 600;
   overflow: hidden;
-  
 }
+
 .image-container img {
-  width: 100%;            /* Forces image to span container width */
-  height: 100%;           /* Forces image to span container height */
-  object-fit: fill; 
+  width: 100%;
+  /* Forces image to span container width */
+  height: 100%;
+  /* Forces image to span container height */
+  object-fit: fill;
 }
 
 .split-bg-wrapper {
   width: 100%;
   /* Split 50% left color (#e5e7eb) and 50% right color (#550c0c) */
-  background: linear-gradient(
-    90deg, 
-    #e5e7eb 0%, 
-    #e5e7eb 50%, 
-    #550c0c 50%, 
-    #550c0c 100%
-  );
+  background: linear-gradient(90deg,
+      #e5e7eb 0%,
+      #e5e7eb 50%,
+      #550c0c 50%,
+      #550c0c 100%);
 }
-.client-grid > :nth-child(1) {
+
+.client-grid> :nth-child(1) {
   border-left: 20px solid #550c0c;
 }
-.client-grid > :nth-child(-n+4) {
+
+.client-grid> :nth-child(-n + 4) {
   border-top: 2px solid #550c0c;
   border-bottom: 2px solid #550c0c;
 }
