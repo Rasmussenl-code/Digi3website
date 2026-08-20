@@ -56,6 +56,8 @@
 
 /* 3. Clients Section */
 .clients-section {
+  flex: 1;
+  min-width: 0;
   max-width: 900px;
   margin: 3rem;
   padding: 0 1.5rem;
@@ -91,7 +93,7 @@
   align-items: start;
   background-color: #e5e7eb;
   height: 300px;
-  border-radius: 15px;
+  border-radius: 0px;
   color: #6b7280;
   font-weight: 600;
   overflow: hidden;
@@ -102,12 +104,13 @@
   /* Forces image to span container width */
   height: 100%;
   /* Forces image to span container height */
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .split-bg-wrapper {
   width: 100%;
   /* Split 50% left color (#e5e7eb) and 50% right color (#550c0c) */
+  display: flex;
   background: linear-gradient(90deg,
       #e5e7eb 0%,
       #e5e7eb 50%,
@@ -115,6 +118,13 @@
       #550c0c 100%);
 }
 
+/* Shared column styles */
+.split-left,
+.split-right {
+  flex: 1; /* Forces each side to take up 50% width */
+  padding: 2rem;
+  min-width: 0;
+}
 .client-grid> :nth-child(1) {
   border-left: 20px solid #550c0c;
 }
@@ -123,3 +133,34 @@
   border-top: 2px solid #550c0c;
   border-bottom: 2px solid #550c0c;
 }
+
+#slideshow {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* 2. Set wrapper to hold 4 slides */
+.slide-wrapper {
+  display: flex;
+  width: 400%;
+  animation: slide-animation 20s infinite;
+}
+
+/* 3. Each slide must be 25% of the 400% wrapper (100% of slideshow view) */
+.slide {
+  width: 25%;
+  flex: 0 0 25%; /* Replaces flex: 1 0 100% */
+  object-fit: cover;
+}
+
+/* 4. Shift by -25% increments (the width of 1 slide) */
+@keyframes slide-animation {
+  0%, 20%   { transform: translateX(0); }
+  25%, 45%  { transform: translateX(-25%); }
+  50%, 70%  { transform: translateX(-50%); }
+  75%, 95%  { transform: translateX(-75%); }
+  100%      { transform: translateX(0); }
+}
+
+
