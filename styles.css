@@ -149,8 +149,17 @@
 
 /* 3. Each slide must be 25% of the 400% wrapper (100% of slideshow view) */
 .slide {
-  width: 25%;
-  flex: 0 0 25%; /* Replaces flex: 1 0 100% */
+  flex: 0 0 25%; /* Forces each slide to strictly occupy 25% of wrapper width */
+  max-width: 25%;
+  margin: 0;
+  padding: 0;
+}
+
+/* If .slide is a <div> wrapper around your <img> elements */
+.slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
   object-fit: cover;
 }
 
